@@ -1,40 +1,179 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/night-edited.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <style>
+    .rn-logo {
+      animation: rotation 15s linear 0s infinite;
+    }
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    .expo-logo {
+      width: 32px;
+      height: auto;
+      position: relative;
+      top: 35px;
+      right: -7px;
+      filter: invert();
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(360deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img class="rn-logo" width="200" data-src="./assets/img/react-native-logo.png" alt="the react native logo">
+        <h4 style="color: #e7ad52;">Welcome to React Native</h4>
+      </section>
+      <section>
+        <section>
+          <h4 style="color: #e7ad52;">What is React Native?</h4>
+          <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="1">This is a best-in-class
+            JavaScript
+            library for creating native apps
+            for Android and iOS
+          </p>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Who created it?</h4>
+          <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="2">Facebook in 2015</p>
+          <p class="fragment" style="font-size: 18px; color: #eee;" data-fragment-index="3">In core: JavaScript, Java,
+            C++, Objective-C</p>
+        </section>
+      </section>
+      <section>
+        <h4 style="color: #e7ad52;">Knowledge:</h4>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="1">1. Good knowledge of
+          JavaScript - ES6+</p>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="2">2. Basic knowledge of React
+        </p>
+      </section>
+      <section>
+        <h4 style="color: #fff;">Link to official website:</h4>
+        <a href="https://reactnative.dev/">https://reactnative.dev</a>
+      </section>
+      <section>
+        <h4 style="color: #e7ad52;">Advantages:</h4>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="1">1. Cross-platform development
+          (Android + IOS)
+        </p>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="2">2. Easy and understandable to
+          use</p>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="3">3. Performance</p>
+        <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="4">4. Community</p>
+      </section>
+      <section>
+        <section>
+          <h4 style="color: #e7ad52;">Setting up the development environment:</h4>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Two CLI for React Native:</h4>
+          <p style="font-size: 20px; color: #eee;">1. Expo Go CLI (better for new mobile developers)
+            <img class="expo-logo" src="./assets/img//expo-cli-logo.png" alt="the expo go logo">
+          </p>
+          <a class="fragment" href="https://expo.dev/" data-fragment-index="1">https://expo.dev</a>
+          <p style="font-size: 20px; color: #eee;">2. React Native CLI</p>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Installing Expo Go CLI:</h4>
+          <pre><code data-trim data-noescape>yarn global add expo-cli</code></pre>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Generating an empty project:</h4>
+          <pre><code data-trim data-noescape>yarn create expo-app project-name</code></pre>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Installing additional dependencies:</h4>
+          <pre>
+          <code data-trim data-noescape>
+          npx expo install react-native-web@~0.18.9
+          react-dom@18.1.0 @expo/webpack-config@^0.17.2
+          </code>
+          </pre>
+          <p class="fragment" style="font-size: 20px; color: #e7ad52;" data-fragment-index="1">
+            to run your development in a browser
+          </p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h4 style="color: #e7ad52;">Now we can run our project in a browser:</p>
+            <pre><code data-trim data-noescape>yarn web</code></pre>
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">After the launch, our project looks like this:</h4>
+          <img width="1000" data-src="./assets/img/first-run.jpg" alt="a web browser window with a text in the middle">
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">Inspecting the main component - App.js:</h4>
+          <img width="500" data-src="./assets/img/app-js.jpg" alt="a code example">
+          <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="1">1. imports of the main
+            components</p>
+          <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="2">2. the function that return
+            JSX</p>
+          <p class="fragment" style="font-size: 20px; color: #eee;" data-fragment-index="3">3. the styles object</p>
+        </section>
+      </section>
+      </section>
+      <section>
+        <h4 style="color: #e7ad52;">Core components examples:</h4>
+        <p style="font-size: 20px; color: #eee;">1. View -> HTML div element</p>
+        <p style="font-size: 20px; color: #eee;">2. Text -> HTML p element</p>
+        <p style="font-size: 20px; color: #eee;">3. Image -> HTML img element</p>
+        <p style="font-size: 20px; color: #eee;">4. View -> HTML div element</p>
+        <p style="font-size: 20px; color: #eee;">5. Button -> HTML button element</p>
+        <p style="font-size: 20px; color: #eee;">6. TextInput -> HTML input type="text" element</p>
+        <span style="font-size: 18px; color: #eee;">and other...</span>
+      </section>
+      <section>
+        <section>
+          <h4 style="color: #e7ad52;">Let's try to change JSX:</h4>
+          <img width="600" data-src="./assets/img/rn-result-code.png" alt="a resulting code">
+        </section>
+        <section>
+          <h4 style="color: #e7ad52;">And result:</h4>
+          <img width="1000" data-src="./assets/img/rn-result-example.jpg" alt="a web browser window">
+        </section>
+      </section>
+      <section>
+        <img class="rn-logo" width="200" data-src="./assets/img/react-native-logo.png" alt="the react native logo">
+        <h4 style="color: #e7ad52; font-size: 22px;">Thank you for watching and listening!</h4>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+
+    Reveal.initialize({
+      hash: true,
+
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
